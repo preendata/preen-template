@@ -1,0 +1,14 @@
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# OSX Stuff
+.DS_Store
+
+# Preen Context
+*preenContext.db*

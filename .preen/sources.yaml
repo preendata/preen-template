@@ -1,0 +1,21 @@
+sources:
+  - name: postgres-docker
+    engine: postgres
+    connection:
+      host: localhost
+      port: 5432
+      database: postgres
+      username: postgres
+      password: thisisnotarealpassword
+    models: 
+      - customer-orders
+  - name: mysql-docker
+    engine: mysql
+    connection:
+      host: localhost
+      port: 3306
+      database: chinook
+      username: root
+      password: thisisnotarealpassword
+    models: 
+      - albums-track-count

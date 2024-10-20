@@ -1,0 +1,29 @@
+name: customer-orders
+type: database
+query: |
+  select
+    customers.companyname,
+    customers.contactname,
+    employees.firstname,
+    employees.lastname,
+    orders.orderdate,
+    orders.requireddate,
+    orders.shippeddate,
+    orders.shipvia,
+    orders.freight,
+    orders.shipname,
+    orders.shipaddress,
+    orders.shipcity,
+    orders.shipcountry,
+    orders.shippostalcode,
+    orders.shipregion
+  from
+    orders
+  inner join
+    customers
+  on
+    orders.customerid = customers.customerid
+  left join
+    employees
+  on 
+    employees.employeeid = orders.employeeid

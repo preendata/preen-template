@@ -1,0 +1,17 @@
+name: albums-track-count
+type: database
+query: |
+  select
+    a.title,
+    art.name,
+    art.artistid,
+    a.albumid,
+    count(t.trackid) as tracks
+  from
+    album a
+  inner join
+    track t on a.albumid=t.albumid
+  inner join
+    artist art on art.artistid = a.artistid
+  group by
+    a.albumid;
